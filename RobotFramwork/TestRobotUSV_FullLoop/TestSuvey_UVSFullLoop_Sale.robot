@@ -9,7 +9,7 @@ TestCase1 Survey Sale Positive_ได้รับคำแนะนำการ�
     Open Browser    ${LinksurveySale_1}    ${Browser}
     Maximize Browser Window
     Sleep    2s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC1/Positive_Page0_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC1/Positive_Page0_TH_xxx_yyyy.png
     Click Element    ${btn_start}
     #Inroduction Page
     IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
