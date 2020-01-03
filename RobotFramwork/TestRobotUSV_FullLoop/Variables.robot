@@ -2,17 +2,35 @@
 Library           Selenium2Library
 
 *** Variables ***
+#CallCenter
+${LinkLogin_CallCenter}    https://s-atv-staging.bizcuitvoc.com/UVS_FullLoop/index.html?mode=CATI
+${UserLogin_CallCenter}    uvsagent1
+${PasswordLogin_CallCenter}    uvsagent1
+${ButtonLogin_CallCenter}    xpath=//div[@id='cati_signin']
+${ButtonNext_RD}    xpath=//div[@id='randomRd']
+#LinkSurveySale_CallCenter
+${LinksurveySale_61}    https://s1-atv-staging.bizcuitvoc.com/46kbxw4c8
+${LinksurveySale_62}    https://s1-atv-staging.bizcuitvoc.com/O0obKc8iD
+${LinksurveySale_63}    https://s1-atv-staging.bizcuitvoc.com/AmPYgEO$r
+${LinksurveySale_64}    https://s1-atv-staging.bizcuitvoc.com/ov@0dDHMW
+${LinksurveySale_65}    https://s1-atv-staging.bizcuitvoc.com/8XsGafw@M
+${LinksurveySale_66}    https://s1-atv-staging.bizcuitvoc.com/eSkgb1fV3
+${LinksurveySale_67}    https://s1-atv-staging.bizcuitvoc.com/dByGCg$l@
+${LinksurveySale_68}    https://s1-atv-staging.bizcuitvoc.com/OybSElS8$
+${LinksurveySale_69}    https://s1-atv-staging.bizcuitvoc.com/xGIBiC5QZ
+${LinksurveySale_70}    https://s1-atv-staging.bizcuitvoc.com/wNGlDkkA2
+#LinkSurveyService_CallCenter
 #Survey Sale Set1
-${LinksurveySale_1}    https://s1-atv-staging.bizcuitvoc.com/AMT8@eoOu
-${LinksurveySale_2}    https://s1-atv-staging.bizcuitvoc.com/W9khmPAeJ
-${LinksurveySale_3}    https://s1-atv-staging.bizcuitvoc.com/oMaR6N7dY
-${LinksurveySale_4}    https://s1-atv-staging.bizcuitvoc.com/ipk0bmwo5
-${LinksurveySale_5}    https://s1-atv-staging.bizcuitvoc.com/7N703BN4D
-${LinksurveySale_6}    https://s1-atv-staging.bizcuitvoc.com/7X5V57bPo
-${LinksurveySale_7}    https://s1-atv-staging.bizcuitvoc.com/u6mTeHYNm
-${LinksurveySale_8}    https://s1-atv-staging.bizcuitvoc.com/07BGsUS4O
-${LinksurveySale_9}    https://s1-atv-staging.bizcuitvoc.com/dtXX4r7Iu
-${LinksurveySale_10}    https://s1-atv-staging.bizcuitvoc.com/EC7PzGIAC
+${LinksurveySale_1}    https://s1-atv-staging.bizcuitvoc.com/AEegKqR1I
+${LinksurveySale_2}    https://s1-atv-staging.bizcuitvoc.com/2fP9$XEnC
+${LinksurveySale_3}    https://s1-atv-staging.bizcuitvoc.com/ogC@9Mvjv
+${LinksurveySale_4}    https://s1-atv-staging.bizcuitvoc.com/IVHY@C8z0
+${LinksurveySale_5}    https://s1-atv-staging.bizcuitvoc.com/HoUZuGfnU
+${LinksurveySale_6}    https://s1-atv-staging.bizcuitvoc.com/oImxX9o5D
+${LinksurveySale_7}    https://s1-atv-staging.bizcuitvoc.com/BoXRIC4Ym
+${LinksurveySale_8}    https://s1-atv-staging.bizcuitvoc.com/f$wRWXAuI
+${LinksurveySale_9}    https://s1-atv-staging.bizcuitvoc.com/h1qaMxCeW
+${LinksurveySale_10}    https://s1-atv-staging.bizcuitvoc.com/UL2oUQEEl
 ${LinksurveySale_11}    https://s1-atv-staging.bizcuitvoc.com/BTYwQoveO
 ${LinksurveySale_12}    https://s1-atv-staging.bizcuitvoc.com/b8BABI4et
 #Survey sale All
@@ -67,16 +85,6 @@ ${LinksurveySale_57}    https://s1-atv-staging.bizcuitvoc.com/IRhHUJOlV
 ${LinksurveySale_58}    https://s1-atv-staging.bizcuitvoc.com/6uQ2w3WVA
 ${LinksurveySale_59}    https://s1-atv-staging.bizcuitvoc.com/eCZT8eFWt
 ${LinksurveySale_60}    https://s1-atv-staging.bizcuitvoc.com/ouCAQwp5K
-${LinksurveySale_61}    https://s1-atv-staging.bizcuitvoc.com/46kbxw4c8
-${LinksurveySale_62}    https://s1-atv-staging.bizcuitvoc.com/O0obKc8iD
-${LinksurveySale_63}    https://s1-atv-staging.bizcuitvoc.com/AmPYgEO$r
-${LinksurveySale_64}    https://s1-atv-staging.bizcuitvoc.com/ov@0dDHMW
-${LinksurveySale_65}    https://s1-atv-staging.bizcuitvoc.com/8XsGafw@M
-${LinksurveySale_66}    https://s1-atv-staging.bizcuitvoc.com/eSkgb1fV3
-${LinksurveySale_67}    https://s1-atv-staging.bizcuitvoc.com/dByGCg$l@
-${LinksurveySale_68}    https://s1-atv-staging.bizcuitvoc.com/OybSElS8$
-${LinksurveySale_69}    https://s1-atv-staging.bizcuitvoc.com/xGIBiC5QZ
-${LinksurveySale_70}    https://s1-atv-staging.bizcuitvoc.com/wNGlDkkA2
 #Survey Service Set1
 ${LinksurveyService_1}    https://s1-atv-staging.bizcuitvoc.com/@NRJSxFmR
 ${LinksurveyService_2}    https://s1-atv-staging.bizcuitvoc.com/YBFXx$qL2
@@ -127,6 +135,14 @@ ${LinksurveyService_45}    /
 ${LinksurveyService_46}    /
 ${LinksurveyService_47}    /
 ${LinksurveyService_48}    /
+${LinksurveyService_49}    /
+${LinksurveyService_50}    /
+${LinksurveyService_51}    /
+${LinksurveyService_52}    /
+${LinksurveyService_53}    /
+${LinksurveyService_54}    /
+${LinksurveyService_55}    /
+${LinksurveyService_56}    /
 #Browser
 ${Browser}        firefox
 #Page1
