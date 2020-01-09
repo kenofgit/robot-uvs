@@ -2808,7 +2808,7 @@ TestCase39 Survey Neutral_ได้รับคำแนะนำการขั
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC39/Neutral_PageCSAT_TH.png
-    Click Element    ${Score7}    #Click Score 7 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='7']    #Click Score 7 CSAT
     #NPS
     QNPS_Sale    ${CheckquestionNPS}    ${CheckAdaptiveText_Sale}    ${CheckquestionNPS1}
     Score0to10_text
@@ -3134,7 +3134,7 @@ TestCase42 (N) Survey Sale Negative_Input OA_Optin Yes_NoGuided_UVS00057
     Attribute1_Sale_Service    ${CheckAttribute_1}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC42/Negative_Attibute1_TH.png
     Sleep    2s
-    Click Element    div[name='page8'] label:nth-of-type(5)    #Click Score 4
+    Click Element    css=div[name='page8'] label:nth-of-type(5)    #Click Score 4
     Sleep    2s
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
@@ -3247,7 +3247,7 @@ TestCase43 Survey Sale Negative_Input OA_OptinNo_Guided_UVS00024
     #Attribute5
     Attribute5_Sale    ${CheckAttribute_5}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC43/Negative_Attibute5_TH.png
-    Click Element    css=div[name='page12']] label:nth-of-type(5)    #Click Score 4
+    Click Element    css=div[name='page12'] label:nth-of-type(5)    #Click Score 4
     Sleep    2s
     #Attribute6
     Attribute6_Sale    ${CheckAttribute_6}
@@ -3397,7 +3397,7 @@ TestCase44 (N) Survey Sale Negative_Input OA_OptinYes_Guided_UVS00065
     #Attribute11
     Attribute11_Sale    ${CheckAttribute_11}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC44/Negative_Attibute11_TH.png
-    Click Element    css=div[name='page19'] label:nth-of-type(9)    #Click Score 7
+    Click Element    css=div[name='page19'] label:nth-of-type(8)    #Click Score 7
     Sleep    2s
     #CheckMedia
     QMedia_Sale    ${CheckQMedia}
@@ -4568,7 +4568,7 @@ TestCase55 Survey Sale Negative_Input OA_OptinNo_Guided_UVS00063
     #Attribute5
     Attribute5_Sale    ${CheckAttribute_5}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC55/Negative_Attibute5_TH.png
-    Click Element    css=div[name='page12']] label:nth-of-type(6)    #Click Score 5
+    Click Element    css=div[name='page12'] label:nth-of-type(6)    #Click Score 5
     Sleep    2s
     #Attribute6
     Attribute6_Sale    ${CheckAttribute_6}

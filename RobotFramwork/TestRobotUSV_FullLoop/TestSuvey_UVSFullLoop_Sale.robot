@@ -271,7 +271,7 @@ TestCase3 Survey Neutral_ได้รับคำแนะนำการขั�
     Attribute1_Sale_Service    ${CheckAttribute_1}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute1_TH.png
     Sleep    2s
-    Click Element    css=div[name='page8'] label:nth-of-type(6)    #Click Score5
+    Click Element    css=div[name='page8'] label:nth-of-type(3)    #Click Score 2
     Sleep    2s
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
@@ -281,46 +281,32 @@ TestCase3 Survey Neutral_ได้รับคำแนะนำการขั�
     #Attribute5
     Attribute5_Sale    ${CheckAttribute_5}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute5_TH.png
-    Click Element    css=div[name='page12'] label:nth-of-type(9)    #Click Score8
+    Click Element    css=div[name='page12'] label:nth-of-type(4)    #Click Score 3
     Sleep    2s
     #Attribute6
     Attribute6_Sale    ${CheckAttribute_6}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute6_TH.png
-    Click Element    css=div[name='page13'] .Scale .NA.STAR11    #Click Score2
+    Click Element    css=div[name='page13'] .Scale .NA.STAR11    #Click N/A
     Sleep    2s
     #Attribute7
     Attribute7_Sale    ${CheckAttribute_7}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute7_TH.png
-    Click Element    name=Answer_15_0_0_0    #ได้รับ
-    Sleep    2s
-    #Attribute7_Profile
-    Attribute7_Profile    ${CheckAtt7_Profile1}
-    ChoiceProfile
-    Click Element    ${CheckChoice3_TH}    #ทางไลน์/เฟซบุ๊ค (ทางร้านเพิ่มลูกค้าทางไลน์ หรือลูกค้าเห็นทางเพจเฟซบุ๊คของทางร้านจากการเชิญเฟซบุ๊ค)
-    Click Element    ${CheckChoice9_TH}    #อื่นๆ โปรดระบุ
-    Press Key    name=profile1_9_oa    แผ่นพับ
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Profile_TH.png
-    Click Element    ${Btn_IconNext}
-    Sleep    2s
-    #Attribute8
-    Attribute8_Sale    ${CheckAttribute_8}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute8_TH.png
-    Click Element    css=div[name='page16'] label:nth-of-type(11)    #Click Score10
+    Click Element    name=Answer_15_0_0_1    #ไม่ได้รับ
     Sleep    2s
     #Attribute9
     Attribute9_Sale    ${CheckAttribute_9}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute9_TH.png
-    Click Element    css=div[name='page17'] label:nth-of-type(7)    #Click Score6
+    Click Element    css=div[name='page17'] label:nth-of-type(7)    #Click Score 6
     Sleep    2s
     #Attribute10
     Attribute10_Sale    ${CheckAttribute_10}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute10_TH.png
-    Click Element    css=div[name='page18'] .Scale > .scalenormal > .ScaleValue > label:nth-of-type(1)    #Click Score0
+    Click Element    css=div[name='page18'] label:nth-of-type(5)    #Click Score 4
     Sleep    2s
     #Attribute11
     Attribute11_Sale    ${CheckAttribute_11}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC3/Attibute11_TH.png
-    Click Element    css=div[name='page19'] label:nth-of-type(2)    #Click Score1
+    Click Element    css=div[name='page19'] label:nth-of-type(8)    #Click Score 7
     Sleep    2s
     #CheckMedia
     QMedia_Sale    ${CheckQMedia}
@@ -478,22 +464,22 @@ TestCase5 (N) Survey Sale Negative_Input OA_Optin Yes_Guided_UVS 00008
     Attribute1_Sale_Service    ${CheckAttribute_1}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC5/Attibute1_TH.png
     Sleep    2s
-    Click Element    css=div[name='page8'] .Scale .NA.STAR11    #ไม่มีพนักงานเข้ามาทักทาย
+    Click Element    css=div[name='page8'] label:nth-of-type(3)    #Click Score2
     Sleep    2s
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC5/Attibute4_TH.png
-    Click Element    css=div[name='page11'] label:nth-of-type(2)    #Click Score1
+    Click Element    css=div[name='page11'] label:nth-of-type(11)    #Click Score 10
     Sleep    2s
     #Attribute5
     Attribute5_Sale    ${CheckAttribute_5}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC5/Attibute5_TH.png
-    Click Element    css=div[name='page12'] label:nth-of-type(6)    #Click Score5
+    Click Element    css=div[name='page12'] label:nth-of-type(4)    #Click Score 3
     Sleep    2s
     #Attribute6
     Attribute6_Sale    ${CheckAttribute_6}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC5/Attibute6_TH.png
-    Click Element    css=div[name='page13'] .Scale .NA.STAR11    #Click Score1
+    Click Element    css=div[name='page13'] .Scale .NA.STAR11    #Click N/A
     Sleep    2s
     #Attribute7
     Attribute7_Sale    ${CheckAttribute_7}
@@ -515,17 +501,17 @@ TestCase5 (N) Survey Sale Negative_Input OA_Optin Yes_Guided_UVS 00008
     #Attribute9
     Attribute9_Sale    ${CheckAttribute_9}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC5/Attibute9_TH.png
-    Click Element    css=div[name='page17'] label:nth-of-type(10)    #Click Score9
+    Click Element    css=div[name='page17'] label:nth-of-type(7)    #Click Score 6
     Sleep    2s
     #Attribute10
     Attribute10_Sale    ${CheckAttribute_10}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC5/Attibute10_TH.png
-    Click Element    css=div[name='page18'] label:nth-of-type(10)    #Click Score9
+    Click Element    css=div[name='page18'] label:nth-of-type(5)    #Click Score 4
     Sleep    2s
     #Attribute11
     Attribute11_Sale    ${CheckAttribute_11}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC5/Attibute11_TH.png
-    Click Element    css=div[name='page19'] label:nth-of-type(3)    #Click Score2
+    Click Element    css=div[name='page19'] label:nth-of-type(8)    #Click Score 7
     Sleep    2s
     #CheckMedia
     QMedia_Sale    ${CheckQMedia}
@@ -639,7 +625,7 @@ TestCase6 (N) Survey Sale Negative_Input OA_Optin Yes_NoGuided_UVS00019
     Sleep    2s
     Close Browser
 
-TestCase7 Survey Sale Negative_Input OA_OptinNo_Guided_UVS0003
+TestCase7 (N) Survey Sale Negative_Input OA_OptinNo_Guided_UVS0003
     #Open Browser
     Open Browser    ${LinksurveySale_7}    ${Browser}
     Maximize Browser Window
@@ -756,7 +742,7 @@ TestCase7 Survey Sale Negative_Input OA_OptinNo_Guided_UVS0003
     Sleep    2s
     Close Browser
 
-TestCase8 Survey Sale Negative_Input OA_OptinNo_NoGuided_UVS00012
+TestCase8 (N) Survey Sale Negative_Input OA_OptinNo_NoGuided_UVS00012
     #Open Browser
     Open Browser    ${LinksurveySale_8}    ${Browser}
     Maximize Browser Window
@@ -789,7 +775,7 @@ TestCase8 Survey Sale Negative_Input OA_OptinNo_NoGuided_UVS00012
     Click Element    ${Score0}    #Click Score 0 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
-    Press Key    name = csat_neg    เดินจี้และเชียร์ตลอด ไม่มีให้โอกาสคิด พนักงานพูดตลอด
+    Press Key    name = csat_neg    พนักงานพูดมาก ไม่มีเวลาเว้นให้คิด
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC8/PageCSATOAPositive_TH.png
     Sleep    2s
     Click Element    ${Btn_IconNext}
@@ -1006,7 +992,6 @@ TestCase10 Survey Sale Negative_NoInputOA_Optin Yes_NoGuided_UVS00011
     Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='2']    #Click Score 2 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
-    Press Key    name = csat_neg    พนักงานไม่เอาใจใส่แนะนำการชับขี่ปลอดภัยไม่รู้เรื่อง
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC10/PageCSATOAPositive_TH.png
     Sleep    2s
     Click Element    ${Btn_IconNext}
@@ -1299,3 +1284,26 @@ TestCase12 Survey Sale Negative_NoInput OA_OptinNo_NoGuidedUVS00020
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC12/EndingPage_TH.png
     Sleep    2s
     Close Browser
+
+TestCase Negative Alert
+    #Open Browser
+    Open Browser    ${LoginGmail}    ${Browser}
+    Input Text    id=identifierId    pornsiri@atvantage.co.th
+    Click Element    id=identifierNext
+    Sleep    3s
+    Input Text    css=input[name='password']    fonn2621
+    Click Element    id=passwordNext
+    Sleep    5s
+    Click Element    ${Gmail}
+    Sleep    2s
+    Input Text    xpath=//div/input[@name='q']    ${RD_ID_TC5}
+    Press Key    xpath=//div/input[@name='q']    \\13
+    Sleep    5s
+    Click Element    xpath=//span[@id=':lh']
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/NegativeAlert/TC5_1.png
+    Maximize Browser Window
+    Sleep    5s
+    Comment    CheckTitleandMailNegativeAlert    ${MailTitle}    ${MailTitle_1}
+    Comment    CheckRDID_5    ${RD_ID5_1}    ${RD_ID5_2}    ${RD_ID5_3}    ${RD_ID5_4}    ${RD_ID5_5}
+    CheckMailNegativeAlert
+    CheckMailDetialNegativeAlert_UVS0008

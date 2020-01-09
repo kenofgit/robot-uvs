@@ -260,3 +260,50 @@ Score0to10_text
     Page Should Contain    8
     Page Should Contain    9
     Page Should Contain    10
+
+CheckTitleandMailNegativeAlert
+    [Arguments]    ${MailTitle}    ${MailTitle_1}
+    Element Text Should Be    //h2[@id=':no']    ${MailTitle}
+    Element Text Should Be    css=h2#\:no    ${MailTitle_1}
+    Element Text Should Be    xpath=//span[@name='noreply@bizcuitintel.com']    noreply@bizcuitintel.com
+
+CheckRDID_5
+    [Arguments]    ${RD_ID5_1}    ${RD_ID5_2}    ${RD_ID5_3}    ${RD_ID5_4}    ${RD_ID5_5}
+    Element Text Should Be    //h2[@id=':no']/span[1]    ${RD_ID5_1}
+    Element Text Should Be    //h2[@id=':no']/span[2]    ${RD_ID5_2}
+    Element Text Should Be    //h2[@id=':no']/span[3]    ${RD_ID5_3}
+    Element Text Should Be    //h2[@id=':no']/span[4]    ${RD_ID5_4}
+    Element Text Should Be    //h2[@id=':no']/span[5]    ${RD_ID5_5}
+
+CheckMailNegativeAlert
+    Element Text Should Be    css=table:nth-of-type(2) > tbody > tr:nth-of-type(1) > td    ลูกค้าของคุณให้คะแนนความพึงพอใจต่ำกว่า 5 จากคะแนนเต็ม 10 เคสของคุณยังไม่ถูกปิดภายใน 24 ชั่วโมง
+    Element Text Should Be    //td[.=' กรุณาติดตามเรื่อง ตามรายละเอียดด้านล่างนี้ ']    กรุณาติดตามเรื่อง ตามรายละเอียดด้านล่างนี้
+    Element Text Should Be    //td[.=' CSAT Score ']    CSAT Score
+    Element Text Should Be    //td[.=' Message ']    Message
+    Element Text Should Be    //td[.=' Opt-in Contact ']    Opt-in Contact
+    Element Text Should Be    //td[.=' Transaction Date ']    Transaction Date
+    Element Text Should Be    //td[.=' First Name ']    First Name
+    Element Text Should Be    //td[.=' Last Name ']    Last Name
+    Element Text Should Be    //td[.=' Tel. ']    Tel.
+    Element Text Should Be    //td[.=' Shop ID ']    Shop ID
+    Element Text Should Be    //td[.=' Shop name ']    Shop name
+    Element Text Should Be    //td[.=' Touchpoint ']    Touchpoint
+    Element Text Should Be    //td[.=' Tel. ']    Tel.
+    Element Text Should Be    //td[.=' Model ']    Model
+    Element Text Should Be    //td[.=' Time over SLA ']    Time over SLA
+    Element Text Should Be    css=table:nth-of-type(4) > tbody > tr:nth-of-type(1) > td    คุณสามารถปิดเคสหรืออัพเดทเกี่ยวกับเคสนี้ จากลิ้งค์ด้านล่าง
+
+CheckMailDetialNegativeAlert_UVS0008
+    #CheckDetial
+    Element Text Should Be    xpath=//td[.='3']    3
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(2) > td:nth-of-type(2)    พนักงานไม่เอาใจใส่แนะนำการชับขี่ปลอดภัยไม่รู้เรื่อง
+    Element Text Should Be    xpath=//td[.='อนุญาต']    อนุญาต
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(4) > td:nth-of-type(2)    2019-12-30T00:00:00.000Z
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(5) > td:nth-of-type(2)    รัตนา
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(6) > td:nth-of-type(2)    สุรเดช
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(7) > td:nth-of-type(2)    0646459299
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(8) > td:nth-of-type(2)    1210300
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(9) > td:nth-of-type(2)    หจก. แสงชัยพาณิชย์ สำนักงานใหญ่
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(10) > td:nth-of-type(2)    Sales
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(11) > td:nth-of-type(2)    WAVE
+    Element Text Should Be    css=table:nth-of-type(3) > tbody > tr:nth-of-type(12) > td:nth-of-type(2)    24 hrs

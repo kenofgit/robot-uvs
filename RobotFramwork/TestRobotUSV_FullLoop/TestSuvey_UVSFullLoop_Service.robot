@@ -491,7 +491,7 @@ TestCase5 Survey Service Neutral_Attr12 Yes_Attr14 Yes_UVS00115
     QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC5/Neutral_PageCSAT_TH.png
-    Click Element    ${Score7}    #Click Score 7 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='7']    #Click Score 7 CSAT
     #NPS
     QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
     Score0to10_text
@@ -705,7 +705,7 @@ TestCase7 Survey Service Neutral_Attr12 No_Attr14 Yes_UVS00124
     QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC7/Neutral_PageCSAT_TH.png
-    Click Element    ${Score7}    #Click Score 7 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='7']    #Click Score 7 CSAT
     #NPS
     QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
     Score0to10_text
@@ -810,7 +810,7 @@ TestCase8 Survey Service Neutral_Attr12 No_Attr14No_UVS0089
     QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC8/Neutral_PageCSAT_TH.png
-    Click Element    ${Score7}    #Click Score 7 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='7']    #Click Score 7 CSAT
     #NPS
     QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
     Score0to10_text

@@ -501,7 +501,7 @@ TestCase29 Survey Service Neutral_Attr12 Yes_Attr14 Yes_UVS00076
     QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC29/Neutral_PageCSAT_TH.png
-    Click Element    ${Score7}    #Click Score 7 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='7']    #Click Score 7 CSAT
     #NPS
     QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
     Score0to10_text

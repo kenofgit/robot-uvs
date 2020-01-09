@@ -7,13 +7,22 @@ Resource          Keywords.robot
 Login CallCenter
     #Open Browser
     Open Browser    ${LinkLogin_CallCenter}    ${Browser}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/Login_CallCenter/1_OpenBrowserSurveyCallCenter.png
     #ClickbuttonLogin
     Click Element    ${ButtonLogin_CallCenter}
     Sleep    2s
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/Login_CallCenter/2_ShowLoginUvsCallCenter.png
     Press Key    id=username    uvsagent1
     Press Key    id=password    uvsagent1
     Select Checkbox    id=rememberMe
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/Login_CallCenter/3_InputLoginSuccess.png
     Click Element    name=login
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/Login_CallCenter/4_ShowforCallSurvey.png
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/Login_CallCenter/5_ShowSurveyCallCenter.png
+    Sleep    2s
 
 TestCase61 Survey Sale Positive NoInput OA CSAT ได้รับคำแนะนำการขับขี่_UVS00029
     #Open Browser
