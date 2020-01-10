@@ -189,7 +189,7 @@ TestCase26 Survey Sale Positive_Attr12 Yes_Attr14No_UVS00083
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC26/Positive_Attribute2_TH.png
     Sleep    2s
     Click Element    css=div[name='page10'] label:nth-of-type(9)    #Click Score 8
-    Sleep    2s
+    Sleep    4s
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC26/Positive_Attribute4_TH.png
@@ -735,7 +735,7 @@ TestCase31 Survey Service Neutral_Attr12 No_Attr14 Yes_UVS00101
     Attribute2_Service    ${CheckAttribute_2}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC31/Neutral_Attribute2_TH.png
     Sleep    2s
-    Click Element    css=div[name='page9'] label:nth-of-type(5)    #Click Score 9
+    Click Element    css=div[name='page9'] label:nth-of-type(10)    #Click Score 9
     Sleep    2s
     #Attribute3
     Attribute3_Service    ${CheckAttribute_3}
@@ -746,7 +746,7 @@ TestCase31 Survey Service Neutral_Attr12 No_Attr14 Yes_UVS00101
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC31/Neutral_Attribute4_TH.png
-    Click Element    css=div[name='page11'] label:nth-of-type(5)    #Click Score 6
+    Click Element    css=div[name='page11'] label:nth-of-type(7)    #Click Score 6
     Sleep    2s
     #Attribute12
     Attribute12_Service    ${CheckAttribute_12}
@@ -1428,7 +1428,7 @@ TestCase37 (N) Survey Service Negative Input OA Optin_Yes_Attr12 No_Attr14 No_UV
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC37/Negative_Attribute2_TH.png
     Sleep    2s
     Click Element    css=div[name='page10'] label:nth-of-type(8)    #Click Score 7
-    Sleep    2s
+    Sleep    4s
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC37/Negative_Attribute4_TH.png
@@ -1447,7 +1447,7 @@ TestCase37 (N) Survey Service Negative Input OA Optin_Yes_Attr12 No_Attr14 No_UV
     #Attribute16
     Attribute16_Service    ${CheckAttribute_16}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC37/Negative_Attribute16_TH.png
-    Click Element    css=div[name='page25'] label:nth-of-type(8)    #Click Score 8
+    Click Element    css=div[name='page25'] label:nth-of-type(8)    #Click Score 7
     #Attribute17
     Attribute17_Service    ${CheckAttribute_17}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC37/Negative_Attribute17_TH.png
@@ -1688,7 +1688,7 @@ TestCase39 Survey Service Negative NoInput OA Optin_Yes_Attr12 Yes_Attr14 Yes_UV
     #Attribute20
     Attribute20_Service    ${CheckAttribute_20}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC39/Negative_Attribute20_TH.png
-    Click Element    name=Answer_29_0_0_1    #ไม่ได้รับการติดต่อ
+    Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
     Sleep    2s
     #EndPage
     Page Should Contain    ${CheckThankyou_Page}
@@ -1815,10 +1815,346 @@ TestCase40 Survey Service Negative NoInput OA Optin_No_Attr12 Yes_Attr14 Yes_UVS
 
 TestCase41 Survey Service Positive NoInput_Attr12_Attr14 Yes_UVS00093
     #Open Browser
+    Open Browser    ${LinksurveyService_41}    ${Browser}
+    Maximize Browser Window
+    Sleep    2s
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Page0_TH.png
+    Click Element    ${btn_start}
+    #Inroduction Page
+    IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
+    Element Should Contain    name=Title_1_0    ${CheckAdaptiveText_Service}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Negative_PageIntro_TH.png
+    Click Element    ${btn_next}
+    Sleep    2s
+    #Condition Reward
+    Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
+    ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
+    ...    ${Opt_in_No_TH}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_PageRewardCondition_TH.png
+    Click Element    name=Answer_2_0_0_1    #ไม่ยอมรับ
+    Click Element    ${Btn_IconNext}
+    Sleep    2s
+    #CSAT
+    QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
+    Score0to10_text
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_PageCSAT_TH.png
+    Click Element    ${Score9}    #Click Score 9 CSAT
+    #Input CSAT OA #No Input
+    OA_CSATPos    ${CheckCSAT_Pos}    ${CheckCSAT_Pos1}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_PageCSATOAPositive_TH.png
+    Sleep    2s
+    Click Element    ${Btn_IconNext}
+    #NPS
+    QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
+    Score0to10_text
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_NPS_TH.png
+    Sleep    2s
+    Set Focus To Element    name=nps
+    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='9']    #Click Score 9 NPS
+    Sleep    2s
+    #Attribute1
+    Attribute1_Sale_Service    ${CheckAttribute_1}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute1_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page8'] label:nth-of-type(7)    #Click Score 6
+    Sleep    2s
+    #Attribute2
+    Attribute2_Service    ${CheckAttribute_2}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute2_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page9'] label:nth-of-type(11)    #Click Score10
+    Sleep    2s
+    #Attribute3
+    Attribute3_Service    ${CheckAttribute_3}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute2_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page10'] label:nth-of-type(6)    #Click Score 5
+    Sleep    2s
+    #Attribute4
+    Attibute4_Sale_Service    ${CheckAttribute_4}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute4_TH.png
+    Click Element    css=div[name='page11'] label:nth-of-type(6)    #Click Score 5
+    Sleep    2s
+    #Attribute12
+    Attribute12_Service    ${CheckAttribute_12}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute12_TH.png
+    Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
+    Sleep    2s
+    #Attribute13
+    Attribute13_Service    ${CheckAttribute_13}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute13_TH.png
+    Click Element    css=div[name='page22'] label:nth-of-type(9)    #Click Score 8
+    Sleep    2s
+    #Attribute14
+    Attribute14_Service    ${CheckAttribute_14}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute14_TH.png
+    Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
+    Sleep    2s
+    #Attribute15
+    Attribute15_Service    ${CheckAttribute_15}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute15_TH.png
+    Click Element    css=div[name='page24'] label:nth-of-type(10)    #Click Score 9
+    Sleep    2s
+    #Attribute16
+    Attribute16_Service    ${CheckAttribute_16}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute16_TH.png
+    Click Element    css=div[name='page25'] label:nth-of-type(11)    #Click Score 10
+    #Attribute17
+    Attribute17_Service    ${CheckAttribute_17}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute17_TH.png
+    Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
+    #Attribute18
+    Attribute18_Service    ${CheckAttribute_18}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute18_TH.png
+    Click Element    name=Answer_27_0_0_1    #ไม่ได้รับการแจ้ง
+    #Attribute19
+    Attribute19_Service    ${CheckAttribute_19}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute19_TH.png
+    Click Element    name=Answer_28_0_0_0    #ได้รับการแจ้ง
+    #Attribute20
+    Attribute20_Service    ${CheckAttribute_20}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/Positive_Attribute20_TH.png
+    Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
+    Sleep    2s
+    #EndPage
+    Page Should Contain    ${CheckThankyou_Page}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC41/EndingPage_TH.png
+    Sleep    2s
+    Close Browser
+
+TestCase42 Survey Service Neutral_Attr12 Yes_Attr14 Yes_UVS00092
+    Open Browser    ${LinksurveyService_42}    ${Browser}
+    Maximize Browser Window
+    Sleep    2s
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Page0_TH.png
+    Click Element    ${btn_start}
+    #Inroduction Page
+    IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
+    Element Should Contain    name=Title_1_0    ${CheckAdaptiveText_Service}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Negative_PageIntro_TH.png
+    Click Element    ${btn_next}
+    Sleep    2s
+    #Condition Reward
+    Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
+    ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
+    ...    ${Opt_in_No_TH}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_PageRewardCondition_TH.png
+    Click Element    name=Answer_2_0_0_0    #ยอมรับ
+    Click Element    ${Btn_IconNext}
+    Sleep    2s
+    #Input Tel in case reward Yes
+    Please TelePhoneNumber    ${CheckPleaseTel}    ${FieldTel_Input}
+    Press Key    name=tel_opt_in    0888888845    #Input Tel
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_PageTelSuccess_TH.png
+    Click Element    ${Btn_IconNext}
+    #CSAT
+    QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
+    Score0to10_text
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_PageCSAT_TH.png
+    Click Element    ${Score7}    #Click Score 7 CSAT
+    #NPS
+    QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
+    Score0to10_text
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_NPS_TH.png
+    Sleep    2s
+    Set Focus To Element    name=nps
+    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='7']    #Click Score 7 NPS
+    Sleep    2s
+    #Attribute1
+    Attribute1_Sale_Service    ${CheckAttribute_1}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute1_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page8'] label:nth-of-type(11)    #Click Score 10
+    Sleep    2s
+    #Attribute2
+    Attribute2_Service    ${CheckAttribute_2}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute2_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page9'] label:nth-of-type(4)    #Click Score 3
+    Sleep    2s
+    #Attribute3
+    Attribute3_Service    ${CheckAttribute_3}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute2_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page10'] label:nth-of-type(9)    #Click Score 8
+    Sleep    2s
+    #Attribute4
+    Attibute4_Sale_Service    ${CheckAttribute_4}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute4_TH.png
+    Click Element    css=div[name='page11'] label:nth-of-type(8)    #Click Score 7
+    Sleep    2s
+    #Attribute12
+    Attribute12_Service    ${CheckAttribute_12}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute12_TH.png
+    Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
+    Sleep    2s
+    #Attribute13
+    Attribute13_Service    ${CheckAttribute_13}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute13_TH.png
+    Click Element    css=div[name='page22'] label:nth-of-type(9)    #Click Score 8
+    Sleep    2s
+    #Attribute14
+    Attribute14_Service    ${CheckAttribute_14}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute14_TH.png
+    Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
+    Sleep    2s
+    #Attribute15
+    Attribute15_Service    ${CheckAttribute_15}
+    Sleep    2s
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute15_TH.png
+    Click Element    css=div[name='page24'] label:nth-of-type(8)    #Click Score 7
+    Sleep    2s
+    #Attribute16
+    Attribute16_Service    ${CheckAttribute_16}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute16_TH.png
+    Click Element    css=div[name='page25'] label:nth-of-type(5)    #Click Score4
+    #Attribute17
+    Attribute17_Service    ${CheckAttribute_17}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute17_TH.png
+    Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
+    #Attribute18
+    Attribute18_Service    ${CheckAttribute_18}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute18_TH.png
+    Click Element    name=Answer_27_0_0_0    #ได้รับการแจ้ง
+    #Attribute19
+    Attribute19_Service    ${CheckAttribute_19}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute19_TH.png
+    Click Element    name=Answer_28_0_0_1    #ไม่ได้รับการแจ้ง
+    #Attribute20
+    Attribute20_Service    ${CheckAttribute_20}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/Neutral_Attribute20_TH.png
+    Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
+    Sleep    2s
+    #EndPage
+    Page Should Contain    ${CheckThankyou_Page}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC42/EndingPage_TH.png
+    Sleep    2s
+    Close Browser
+
+TestCase43 (N) Survey Service Negative Input OA Optin_Yes_Attr12 Yes_Attr14 Yes_UVS00099
+    #Open Browser
+    Open Browser    ${LinksurveyService_43}    ${Browser}
+    Maximize Browser Window
+    Sleep    2s
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Page0_TH.png
+    Click Element    ${btn_start}
+    #Inroduction Page
+    IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
+    Element Should Contain    name=Title_1_0    ${CheckAdaptiveText_Service}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_PageIntro_TH.png
+    Click Element    ${btn_next}
+    Sleep    2s
+    #Condition Reward
+    Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
+    ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
+    ...    ${Opt_in_No_TH}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_PageRewardCondition_TH.png
+    Click Element    name=Answer_2_0_0_0    #ยอมรับ
+    Click Element    ${Btn_IconNext}
+    Sleep    2s
+    #Input Tel in case reward Yes
+    Please TelePhoneNumber    ${CheckPleaseTel}    ${FieldTel_Input}
+    Press Key    name=tel_opt_in    0888888849    #Input Tel
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_PageTelSuccess_TH.png
+    Click Element    ${Btn_IconNext}
+    #CSAT
+    QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
+    Score0to10_text
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_PageCSAT_TH.png
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='1']    #Click Score 1 CSAT
+    #Input CSAT OA
+    OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
+    Press Key    name = csat_neg    มีการเก็บค่าใช้จ่ายเพิ่มเติมแต่ไม่มีการโทรแจ้งก่อน
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_PageCSATOAPositive_TH.png
+    Sleep    2s
+    Click Element    ${Btn_IconNext}
+    #Optin Negative
+    OptinNegative    ${CheckOptinNegative}
+    Click Element    name=Answer_7_0_0_0    #ยินยอม
+    #NPS
+    QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
+    Score0to10_text
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_NPS_TH.png
+    Sleep    2s
+    Set Focus To Element    name=nps
+    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='2']    #Click Score 2 NPS
+    Sleep    2s
+    #Attribute1
+    Attribute1_Sale_Service    ${CheckAttribute_1}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute1_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page8'] label:nth-of-type(3)    #Click Score 2
+    Sleep    2s
+    #Attribute2
+    Attribute2_Service    ${CheckAttribute_2}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute2_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page9'] label:nth-of-type(2)    #Click Score 1
+    Sleep    2s
+    #Attribute3
+    Attribute3_Service    ${CheckAttribute_3}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute2_TH.png
+    Sleep    2s
+    Click Element    css=div[name='page10'] .Scale .ScaleValue > label:nth-of-type(1)    #Click Score 0
+    Sleep    2s
+    #Attribute4
+    Attibute4_Sale_Service    ${CheckAttribute_4}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute4_TH.png
+    Click Element    css=div[name='page11'] .Scale .ScaleValue > label:nth-of-type(1)    #Click Score 0
+    Sleep    2s
+    #Attribute12
+    Attribute12_Service    ${CheckAttribute_12}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute12_TH.png
+    Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
+    Sleep    2s
+    #Attribute13
+    Attribute13_Service    ${CheckAttribute_13}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute13_TH.png
+    Click Element    css=div[name='page22'] label:nth-of-type(7)    #Click Score 6
+    Sleep    2s
+    #Attribute14
+    Attribute14_Service    ${CheckAttribute_14}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute14_TH.png
+    Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
+    Sleep    2s
+    #Attribute15
+    Attribute15_Service    ${CheckAttribute_15}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute15_TH.png
+    Click Element    css=div[name='page24'] label:nth-of-type(9)    #Click Score 8
+    Sleep    2s
+    #Attribute16
+    Attribute16_Service    ${CheckAttribute_16}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute16_TH.png
+    Click Element    css=div[name='page25'] label:nth-of-type(4)    #Click Score 3
+    #Attribute17
+    Attribute17_Service    ${CheckAttribute_17}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute17_TH.png
+    Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
+    #Attribute18
+    Attribute18_Service    ${CheckAttribute_18}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute18_TH.png
+    Click Element    name=Answer_27_0_0_0    #ได้รับการแจ้ง
+    #Attribute19
+    Attribute19_Service    ${CheckAttribute_19}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute19_TH.png
+    Click Element    name=Answer_28_0_0_1    #ไม่ได้รับการแจ้ง
+    #Attribute20
+    Attribute20_Service    ${CheckAttribute_20}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/Negative_Attribute20_TH.png
+    Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
+    Sleep    2s
+    #EndPage
+    Page Should Contain    ${CheckThankyou_Page}
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC43/EndingPage_TH.png
+    Sleep    2s
+    Close Browser
+
+TestCase44 Survey Service Negative Input OA Optin_No_Attr12 Yes_Attr14 Yes_UVS00094
+    #Open Browser
     Open Browser    ${LinksurveyService_44}    ${Browser}
     Maximize Browser Window
     Sleep    2s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Page0_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Page0_TH.png
     Click Element    ${btn_start}
     #Inroduction Page
     IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
@@ -1830,90 +2166,94 @@ TestCase41 Survey Service Positive NoInput_Attr12_Attr14 Yes_UVS00093
     Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
     ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
     ...    ${Opt_in_No_TH}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_PageRewardCondition_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_PageRewardCondition_TH.png
     Click Element    name=Answer_2_0_0_1    #ไม่ยอมรับ
     Click Element    ${Btn_IconNext}
     Sleep    2s
     #CSAT
     QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
     Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_PageCSAT_TH.png
-    Click Element    ${Score9}    #Click Score 9 CSAT
-    #Input CSAT OA #No Input
-    OA_CSATPos    ${CheckCSAT_Pos}    ${CheckCSAT_Pos1}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_PageCSATOAPositive_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_PageCSAT_TH.png
+    Click Element    ${Score1}    #Click Score 1 CSAT
+    #Input CSAT OA
+    OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
+    Press Key    name = csat_neg    พนักงานพูดจาไม่โอเค
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_PageCSATOAPositive_TH.png
     Sleep    2s
     Click Element    ${Btn_IconNext}
+    #Optin Negative
+    OptinNegative    ${CheckOptinNegative}
+    Click Element    name=Answer_7_0_0_1    #ไม่ยินยอม
     #NPS
     QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
     Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_NPS_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_NPS_TH.png
     Sleep    2s
     Set Focus To Element    name=nps
-    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='9']    #Click Score 9 NPS
+    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='2']    #Click Score 2 NPS
     Sleep    2s
     #Attribute1
     Attribute1_Sale_Service    ${CheckAttribute_1}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute1_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute1_TH.png
     Sleep    2s
-    Click Element    css=div[name='page8'] label:nth-of-type(7)    #Click Score 6
+    Click Element    css=div[name='page8'] label:nth-of-type(5)    #Click Score 4
     Sleep    2s
     #Attribute2
     Attribute2_Service    ${CheckAttribute_2}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute2_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute2_TH.png
     Sleep    2s
-    Click Element    css=div[name='page9'] label:nth-of-type(11)    #Click Score10
+    Click Element    css=div[name='page9'] label:nth-of-type(6)    #Click Score 5
     Sleep    2s
     #Attribute3
     Attribute3_Service    ${CheckAttribute_3}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute2_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute2_TH.png
     Sleep    2s
-    Click Element    css=div[name='page10'] label:nth-of-type(6)    #Click Score 5
+    Click Element    css=div[name='page10'] label:nth-of-type(5)    #Click Score 4
     Sleep    2s
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute4_TH.png
-    Click Element    css=div[name='page11'] label:nth-of-type(6)    #Click Score 5
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute4_TH.png
+    Click Element    css=div[name='page11'] label:nth-of-type(10)    #Click Score 9
     Sleep    2s
     #Attribute12
     Attribute12_Service    ${CheckAttribute_12}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute12_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute12_TH.png
     Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
     Sleep    2s
     #Attribute13
     Attribute13_Service    ${CheckAttribute_13}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC26/Positive_Attribute13_TH.png
-    Click Element    css=div[name='page22'] label:nth-of-type(9)    #Click Score 8
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute13_TH.png
+    Click Element    css=div[name='page22'] label:nth-of-type(10)    #Click Score 9
     Sleep    2s
     #Attribute14
     Attribute14_Service    ${CheckAttribute_14}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute14_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute14_TH.png
     Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
     Sleep    2s
     #Attribute15
     Attribute15_Service    ${CheckAttribute_15}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC27/Positive_Attribute15_TH.png
-    Click Element    css=div[name='page24'] label:nth-of-type(10)    #Click Score 9
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute15_TH.png
+    Click Element    css=div[name='page24'] label:nth-of-type(8)    #Click Score 7
     Sleep    2s
     #Attribute16
     Attribute16_Service    ${CheckAttribute_16}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute16_TH.png
-    Click Element    css=div[name='page25'] label:nth-of-type(11)    #Click Score 10
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute16_TH.png
+    Click Element    css=div[name='page25'] label:nth-of-type(3)    #Click Score 2
     #Attribute17
     Attribute17_Service    ${CheckAttribute_17}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute17_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute17_TH.png
     Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
     #Attribute18
     Attribute18_Service    ${CheckAttribute_18}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute18_TH.png
-    Click Element    name=Answer_27_0_0_1    #ไม่ได้รับการแจ้ง
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute18_TH.png
+    Click Element    name=Answer_27_0_0_0    #ได้รับการแจ้ง
     #Attribute19
     Attribute19_Service    ${CheckAttribute_19}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute19_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute19_TH.png
     Click Element    name=Answer_28_0_0_0    #ได้รับการแจ้ง
     #Attribute20
     Attribute20_Service    ${CheckAttribute_20}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Positive_Attribute20_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC44/Negative_Attribute20_TH.png
     Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
     Sleep    2s
     #EndPage
@@ -1922,11 +2262,12 @@ TestCase41 Survey Service Positive NoInput_Attr12_Attr14 Yes_UVS00093
     Sleep    2s
     Close Browser
 
-TestCase42 Survey Service Neutral_Attr12 Yes_Attr14 Yes_UVS00092
+TestCase45 Survey Service Negative NoInput OA Optin_Yes_Attr12 Yes_Attr14 Yes_UVS00103
+    #Open Browser
     Open Browser    ${LinksurveyService_45}    ${Browser}
     Maximize Browser Window
     Sleep    2s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Page0_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Page0_TH.png
     Click Element    ${btn_start}
     #Inroduction Page
     IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
@@ -1938,364 +2279,23 @@ TestCase42 Survey Service Neutral_Attr12 Yes_Attr14 Yes_UVS00092
     Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
     ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
     ...    ${Opt_in_No_TH}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_PageRewardCondition_TH.png
-    Click Element    name=Answer_2_0_0_0    #ยอมรับ
-    Click Element    ${Btn_IconNext}
-    Sleep    2s
-    #Input Tel in case reward Yes
-    Please TelePhoneNumber    ${CheckPleaseTel}    ${FieldTel_Input}
-    Press Key    name=tel_opt_in    0888888845    #Input Tel
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_PageTelSuccess_TH.png
-    Click Element    ${Btn_IconNext}
-    #CSAT
-    QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
-    Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_PageCSAT_TH.png
-    Click Element    ${Score7}    #Click Score 7 CSAT
-    #NPS
-    QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
-    Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_NPS_TH.png
-    Sleep    2s
-    Set Focus To Element    name=nps
-    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='7']    #Click Score 7 NPS
-    Sleep    2s
-    #Attribute1
-    Attribute1_Sale_Service    ${CheckAttribute_1}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute1_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page8'] label:nth-of-type(11)    #Click Score 10
-    Sleep    2s
-    #Attribute2
-    Attribute2_Service    ${CheckAttribute_2}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute2_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page9'] label:nth-of-type(4)    #Click Score 3
-    Sleep    2s
-    #Attribute3
-    Attribute3_Service    ${CheckAttribute_3}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute2_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page10'] label:nth-of-type(9)    #Click Score 8
-    Sleep    2s
-    #Attribute4
-    Attibute4_Sale_Service    ${CheckAttribute_4}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute4_TH.png
-    Click Element    css=div[name='page11'] label:nth-of-type(8)    #Click Score 7
-    Sleep    2s
-    #Attribute12
-    Attribute12_Service    ${CheckAttribute_12}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute12_TH.png
-    Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
-    Sleep    2s
-    #Attribute13
-    Attribute13_Service    ${CheckAttribute_13}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute13_TH.png
-    Click Element    css=div[name='page22'] label:nth-of-type(9)    #Click Score 8
-    Sleep    2s
-    #Attribute14
-    Attribute14_Service    ${CheckAttribute_14}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute14_TH.png
-    Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
-    Sleep    2s
-    #Attribute15
-    Attribute15_Service    ${CheckAttribute_15}
-    Sleep    2s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute15_TH.png
-    Click Element    css=div[name='page24'] label:nth-of-type(8)    #Click Score 7
-    Sleep    2s
-    #Attribute16
-    Attribute16_Service    ${CheckAttribute_16}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute16_TH.png
-    Click Element    css=div[name='page25'] label:nth-of-type(5)    #Click Score4
-    #Attribute17
-    Attribute17_Service    ${CheckAttribute_17}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute17_TH.png
-    Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
-    #Attribute18
-    Attribute18_Service    ${CheckAttribute_18}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute18_TH.png
-    Click Element    name=Answer_27_0_0_0    #ได้รับการแจ้ง
-    #Attribute19
-    Attribute19_Service    ${CheckAttribute_19}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute19_TH.png
-    Click Element    name=Answer_28_0_0_1    #ไม่ได้รับการแจ้ง
-    #Attribute20
-    Attribute20_Service    ${CheckAttribute_20}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Neutral_Attribute20_TH.png
-    Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
-    Sleep    2s
-    #EndPage
-    Page Should Contain    ${CheckThankyou_Page}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/EndingPage_TH.png
-    Sleep    2s
-    Close Browser
-
-TestCase43 (N) Survey Service Negative Input OA Optin_Yes_Attr12 Yes_Attr14 Yes_UVS00099
-    #Open Browser
-    Open Browser    ${LinksurveyService_49}    ${Browser}
-    Maximize Browser Window
-    Sleep    2s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Page0_TH.png
-    Click Element    ${btn_start}
-    #Inroduction Page
-    IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
-    Element Should Contain    name=Title_1_0    ${CheckAdaptiveText_Service}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_PageIntro_TH.png
-    Click Element    ${btn_next}
-    Sleep    2s
-    #Condition Reward
-    Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
-    ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
-    ...    ${Opt_in_No_TH}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_PageRewardCondition_TH.png
-    Click Element    name=Answer_2_0_0_0    #ยอมรับ
-    Click Element    ${Btn_IconNext}
-    Sleep    2s
-    #Input Tel in case reward Yes
-    Please TelePhoneNumber    ${CheckPleaseTel}    ${FieldTel_Input}
-    Press Key    name=tel_opt_in    0888888849    #Input Tel
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_PageTelSuccess_TH.png
-    Click Element    ${Btn_IconNext}
-    #CSAT
-    QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
-    Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_PageCSAT_TH.png
-    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='1']    #Click Score 1 CSAT
-    #Input CSAT OA
-    OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
-    Press Key    name = csat_neg    มีการเก็บค่าใช้จ่ายเพิ่มเติมแต่ไม่มีการโทรแจ้งก่อน
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_PageCSATOAPositive_TH.png
-    Sleep    2s
-    Click Element    ${Btn_IconNext}
-    #Optin Negative
-    OptinNegative    ${CheckOptinNegative}
-    Click Element    name=Answer_7_0_0_0    #ยินยอม
-    #NPS
-    QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
-    Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_NPS_TH.png
-    Sleep    2s
-    Set Focus To Element    name=nps
-    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='2']    #Click Score 2 NPS
-    Sleep    2s
-    #Attribute1
-    Attribute1_Sale_Service    ${CheckAttribute_1}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute1_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page8'] label:nth-of-type(3)    #Click Score 2
-    Sleep    2s
-    #Attribute2
-    Attribute2_Service    ${CheckAttribute_2}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute2_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page9'] label:nth-of-type(2)    #Click Score 1
-    Sleep    2s
-    #Attribute3
-    Attribute3_Service    ${CheckAttribute_3}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute2_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page10'] .Scale .ScaleValue > label:nth-of-type(1)    #Click Score 0
-    Sleep    2s
-    #Attribute4
-    Attibute4_Sale_Service    ${CheckAttribute_4}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute4_TH.png
-    Click Element    css=div[name='page11'] .Scale .ScaleValue > label:nth-of-type(1)    #Click Score 0
-    Sleep    2s
-    #Attribute12
-    Attribute12_Service    ${CheckAttribute_12}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute12_TH.png
-    Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
-    Sleep    2s
-    #Attribute13
-    Attribute13_Service    ${CheckAttribute_13}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute13_TH.png
-    Click Element    css=div[name='page22'] label:nth-of-type(7)    #Click Score 6
-    Sleep    2s
-    #Attribute14
-    Attribute14_Service    ${CheckAttribute_14}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute14_TH.png
-    Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
-    Sleep    2s
-    #Attribute15
-    Attribute15_Service    ${CheckAttribute_15}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute15_TH.png
-    Click Element    css=div[name='page24'] label:nth-of-type(9)    #Click Score 8
-    Sleep    2s
-    #Attribute16
-    Attribute16_Service    ${CheckAttribute_16}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute16_TH.png
-    Click Element    css=div[name='page25'] label:nth-of-type(4)    #Click Score 3
-    #Attribute17
-    Attribute17_Service    ${CheckAttribute_17}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute17_TH.png
-    Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
-    #Attribute18
-    Attribute18_Service    ${CheckAttribute_18}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute18_TH.png
-    Click Element    name=Answer_27_0_0_0    #ได้รับการแจ้ง
-    #Attribute19
-    Attribute19_Service    ${CheckAttribute_19}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute19_TH.png
-    Click Element    name=Answer_28_0_0_1    #ไม่ได้รับการแจ้ง
-    #Attribute20
-    Attribute20_Service    ${CheckAttribute_20}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/Negative_Attribute20_TH.png
-    Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
-    Sleep    2s
-    #EndPage
-    Page Should Contain    ${CheckThankyou_Page}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC49/EndingPage_TH.png
-    Sleep    2s
-    Close Browser
-
-TestCase44 Survey Service Negative Input OA Optin_No_Attr12 Yes_Attr14 Yes_UVS00094
-    #Open Browser
-    Open Browser    ${LinksurveyService_51}    ${Browser}
-    Maximize Browser Window
-    Sleep    2s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Page0_TH.png
-    Click Element    ${btn_start}
-    #Inroduction Page
-    IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
-    Element Should Contain    name=Title_1_0    ${CheckAdaptiveText_Service}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_PageIntro_TH.png
-    Click Element    ${btn_next}
-    Sleep    2s
-    #Condition Reward
-    Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
-    ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
-    ...    ${Opt_in_No_TH}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_PageRewardCondition_TH.png
-    Click Element    name=Answer_2_0_0_1    #ไม่ยอมรับ
-    Click Element    ${Btn_IconNext}
-    Sleep    2s
-    #CSAT
-    QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
-    Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_PageCSAT_TH.png
-    Click Element    ${Score1}    #Click Score 1 CSAT
-    #Input CSAT OA
-    OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
-    Press Key    name = csat_neg    พนักงานพูดจาไม่โอเค
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_PageCSATOAPositive_TH.png
-    Sleep    2s
-    Click Element    ${Btn_IconNext}
-    #Optin Negative
-    OptinNegative    ${CheckOptinNegative}
-    Click Element    name=Answer_7_0_0_1    #ไม่ยินยอม
-    #NPS
-    QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
-    Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_NPS_TH.png
-    Sleep    2s
-    Set Focus To Element    name=nps
-    Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='2']    #Click Score 2 NPS
-    Sleep    2s
-    #Attribute1
-    Attribute1_Sale_Service    ${CheckAttribute_1}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute1_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page8'] label:nth-of-type(5)    #Click Score 4
-    Sleep    2s
-    #Attribute2
-    Attribute2_Service    ${CheckAttribute_2}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute2_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page9'] label:nth-of-type(6)    #Click Score 5
-    Sleep    2s
-    #Attribute3
-    Attribute3_Service    ${CheckAttribute_3}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute2_TH.png
-    Sleep    2s
-    Click Element    css=div[name='page10'] label:nth-of-type(5)    #Click Score 4
-    Sleep    2s
-    #Attribute4
-    Attibute4_Sale_Service    ${CheckAttribute_4}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute4_TH.png
-    Click Element    css=div[name='page11'] label:nth-of-type(10)    #Click Score 9
-    Sleep    2s
-    #Attribute12
-    Attribute12_Service    ${CheckAttribute_12}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute12_TH.png
-    Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
-    Sleep    2s
-    #Attribute13
-    Attribute13_Service    ${CheckAttribute_13}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute13_TH.png
-    Click Element    css=div[name='page22'] label:nth-of-type(10)    #Click Score 9
-    Sleep    2s
-    #Attribute14
-    Attribute14_Service    ${CheckAttribute_14}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute14_TH.png
-    Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
-    Sleep    2s
-    #Attribute15
-    Attribute15_Service    ${CheckAttribute_15}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC50/Negative_Attribute15_TH.png
-    Click Element    css=div[name='page24'] label:nth-of-type(8)    #Click Score 7
-    Sleep    2s
-    #Attribute16
-    Attribute16_Service    ${CheckAttribute_16}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute16_TH.png
-    Click Element    css=div[name='page25'] label:nth-of-type(3)    #Click Score 2
-    #Attribute17
-    Attribute17_Service    ${CheckAttribute_17}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute17_TH.png
-    Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
-    #Attribute18
-    Attribute18_Service    ${CheckAttribute_18}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute18_TH.png
-    Click Element    name=Answer_27_0_0_0    #ได้รับการแจ้ง
-    #Attribute19
-    Attribute19_Service    ${CheckAttribute_19}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute19_TH.png
-    Click Element    name=Answer_28_0_0_0    #ได้รับการแจ้ง
-    #Attribute20
-    Attribute20_Service    ${CheckAttribute_20}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/Negative_Attribute20_TH.png
-    Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
-    Sleep    2s
-    #EndPage
-    Page Should Contain    ${CheckThankyou_Page}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC51/EndingPage_TH.png
-    Sleep    2s
-    Close Browser
-
-TestCase45 Survey Service Negative NoInput OA Optin_Yes_Attr12 Yes_Attr14 Yes_UVS00103
-    #Open Browser
-    Open Browser    ${LinksurveyService_55}    ${Browser}
-    Maximize Browser Window
-    Sleep    2s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Page0_TH.png
-    Click Element    ${btn_start}
-    #Inroduction Page
-    IntroductionSale_Service    ${CheckIntro}    ${CheckIntro_1}    ${CheckIntro_2}    ${CheckIntro_3}    ${btn_TH}
-    Element Should Contain    name=Title_1_0    ${CheckAdaptiveText_Service}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_PageIntro_TH.png
-    Click Element    ${btn_next}
-    Sleep    2s
-    #Condition Reward
-    Reward Condition    ${CheckRewardTH}    ${CheckRewardTH_1}    ${CheckRewardTH_2}    ${CheckRewardTH_3}    ${CheckRewardTH_4}    ${CheckRewardTH_5}
-    ...    ${CheckRewardTH_6}    ${CheckRewardTH_7}    ${CheckRewardTH_8}    ${CheckRewardTH_9}    ${CheckQuestionReward}    ${Opt_in_Yes_TH}
-    ...    ${Opt_in_No_TH}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_PageRewardCondition_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_PageRewardCondition_TH.png
     Click Element    name=Answer_2_0_0_0    #ยอมรับ
     Click Element    ${Btn_IconNext}
     Sleep    2s
     #Input Tel in case reward Yes
     Please TelePhoneNumber    ${CheckPleaseTel}    ${FieldTel_Input}
     Press Key    name=tel_opt_in    0888888855    #Input Tel
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_PageTelSuccess_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_PageTelSuccess_TH.png
     Click Element    ${Btn_IconNext}
     #CSAT
     QCSAT_Service    ${CheckquestionCSAT}    ${CheckAdaptiveText_Service}    ${CheckquestionCSAT1}
     Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_PageCSAT_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_PageCSAT_TH.png
     Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='2']    #Click Score 2 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_PageCSATOAPositive_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_PageCSATOAPositive_TH.png
     Sleep    2s
     Click Element    ${Btn_IconNext}
     #Optin Negative
@@ -2304,78 +2304,78 @@ TestCase45 Survey Service Negative NoInput OA Optin_Yes_Attr12 Yes_Attr14 Yes_UV
     #NPS
     QNPS_Service    ${CheckquestionNPS}    ${CheckAdaptiveText_Service}    ${CheckquestionNPS1}
     Score0to10_text
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_NPS_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_NPS_TH.png
     Sleep    2s
     Set Focus To Element    name=nps
     Click Element    //*[@compname="LayoutNodeUI_53"]//following::span[text()='2']    #Click Score 2 NPS
     Sleep    2s
     #Attribute1
     Attribute1_Sale_Service    ${CheckAttribute_1}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute1_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute1_TH.png
     Sleep    2s
     Click Element    css=div[name='page8'] label:nth-of-type(5)    #Click Score 4
     Sleep    2s
     #Attribute2
     Attribute2_Service    ${CheckAttribute_2}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute2_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute2_TH.png
     Sleep    2s
     Click Element    css=div[name='page9'] label:nth-of-type(11)    #Click Score 10
     Sleep    2s
     #Attribute3
     Attribute3_Service    ${CheckAttribute_3}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute2_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute2_TH.png
     Sleep    2s
     Click Element    css=div[name='page10'] .Scale .ScaleValue > label:nth-of-type(1)    #Click Score 0
     Sleep    2s
     #Attribute4
     Attibute4_Sale_Service    ${CheckAttribute_4}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute4_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute4_TH.png
     Click Element    css=div[name='page11'] .Scale .ScaleValue > label:nth-of-type(1)    #Click Score0
     Sleep    2s
     #Attribute12
     Attribute12_Service    ${CheckAttribute_12}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute12_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute12_TH.png
     Click Element    name=Answer_21_0_0_0    #ได้รับการแจ้ง
     Sleep    2s
     #Attribute13
     Attribute13_Service    ${CheckAttribute_13}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute13_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute13_TH.png
     Click Element    css=div[name='page22'] label:nth-of-type(8)    #Click Score 7
     Sleep    2s
     #Attribute14
     Attribute14_Service    ${CheckAttribute_14}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute14_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute14_TH.png
     Click Element    name=Answer_23_0_0_0    #ได้รับการแจ้ง
     Sleep    2s
     #Attribute15
     Attribute15_Service    ${CheckAttribute_15}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute15_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute15_TH.png
     Click Element    css=div[name='page24'] label:nth-of-type(8)    #Click Score 7
     Sleep    2s
     #Attribute16
     Attribute16_Service    ${CheckAttribute_16}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute16_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute16_TH.png
     Click Element    css=div[name='page25'] label:nth-of-type(10)    #Click Score 9
     #Attribute17
     Attribute17_Service    ${CheckAttribute_17}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute17_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute17_TH.png
     Click Element    name=Answer_26_0_0_0    #ได้รับการแจ้ง
     #Attribute18
     Attribute18_Service    ${CheckAttribute_18}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute18_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute18_TH.png
     Click Element    name=Answer_27_0_0_0    #ได้รับการแจ้ง
     #Attribute19
     Attribute19_Service    ${CheckAttribute_19}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute19_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute19_TH.png
     Click Element    name=Answer_28_0_0_1    #ไม่ได้รับการแจ้ง
     #Attribute20
     Attribute20_Service    ${CheckAttribute_20}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/Negative_Attribute20_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/Negative_Attribute20_TH.png
     Click Element    name=Answer_29_0_0_0    #ได้รับการติดต่อ
     Sleep    2s
     #EndPage
     Page Should Contain    ${CheckThankyou_Page}
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC55/EndingPage_TH.png
+    Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC45/EndingPage_TH.png
     Sleep    2s
     Close Browser
 

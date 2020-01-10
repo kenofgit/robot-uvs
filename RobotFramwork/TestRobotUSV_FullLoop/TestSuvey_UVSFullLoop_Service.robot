@@ -127,7 +127,7 @@ TestCase1 Survey Service Positive_Attr12 Yes_Attr14 Yes_UVS00073
     Sleep    2s
     Close Browser
 
-TestCase2 Survey Sale Positive_Attr12 Yes_Attr14No_UVS00091
+TestCase2 Survey Service Positive_Attr12 Yes_Attr14No_UVS00091
     #Open Browser
     Open Browser    ${LinksurveyService_2}    ${Browser}
     Maximize Browser Window
@@ -1415,7 +1415,7 @@ TestCase13 (N) Survey Service Negative Input OA Optin_Yes_Attr12 No_Attr14 Yes_U
     #Attribute15
     Attribute15_Service    ${CheckAttribute_15}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC13/Negative_Attribute15_TH.png
-    Click Element    css=div[name='page24'] label:nth-of-type(9)    #Click Score10
+    Click Element    css=div[name='page24'] label:nth-of-type(10)    #Click Score 9
     Sleep    2s
     #Attribute16
     Attribute16_Service    ${CheckAttribute_16}
@@ -2653,7 +2653,7 @@ TestCase24 Survey Service Negative NoInput OA Optin_No_Attr12 No_Attr14 No_UVS00
     Attribute18_Service    ${CheckAttribute_18}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC24/Negative_Attribute18_TH.png
     Click Element    name=Answer_27_0_0_1    #ไม่ได้รับการแจ้ง
-    #Attribute19
+    #Attribute19้
     Attribute19_Service    ${CheckAttribute_19}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Service/TC24/Negative_Attribute19_TH.png
     Click Element    name=Answer_28_0_0_0    #ได้รับการแจ้ง

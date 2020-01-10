@@ -782,7 +782,7 @@ TestCase20 Survey Sale Negative_Input OA_OptinNo_NoGuided_UVS00048
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC20/Negative_PageCSAT_TH.png
-    Click Element    ${Score2}    #Click Score 2 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='2']    #Click Score 2 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Press Key    name = csat_neg    ไม่มีอะไรดีเลย แต่จำเป็นต้องซื้อที่นี่เพราะเป็นสาขาใกล้บ้าน
@@ -885,7 +885,7 @@ TestCase21 Survey Sale Negative_NoInput OA_Optin Yes_Guided_UVS00062
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC21/Negative_PageCSAT_TH.png
-    Click Element    ${Score3}    #Click Score 3 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='3']    #Click Score 3 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC21/Negative_PageCSATOAPositive_TH.png
@@ -1095,7 +1095,7 @@ TestCase23 Survey Sale Negative_NoInput OA_OptinNo_Guided_UVS00013
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC23/Negative_PageCSAT_TH.png
-    Click Element    ${Score1}    #Click Score 1 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='1']    #Click Score 1 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC23/Negative_PageCSATOAPositive_TH.png
@@ -1210,7 +1210,7 @@ TestCase24 Survey Sale Negative_NoInput OA_OptinNo_NoGuidedUVS00058
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC24/Negative_PageCSAT_TH.png
-    Click Element    ${Score4}    #Click Score 4 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='4']    #Click Score 4 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC24/Negative_PageCSATOAPositive_TH.png
