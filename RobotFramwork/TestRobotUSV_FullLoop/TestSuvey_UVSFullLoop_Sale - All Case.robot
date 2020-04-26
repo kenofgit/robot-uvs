@@ -564,6 +564,7 @@ TestCase18 (N) Survey Sale Negative_Input OA_Optin Yes_NoGuided_UVS00026_ไม�
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC18/Negative_PageCSAT_TH.png
     Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='4']    #Click Score 4 CSAT
+    Sleep    2s
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Press Key    name = csat_neg    พนักงานไม่เอาใจใส่แนะนำการชับขี่ปลอดภัยไม่รู้เรื่อง
@@ -573,6 +574,7 @@ TestCase18 (N) Survey Sale Negative_Input OA_Optin Yes_NoGuided_UVS00026_ไม�
     #Optin Negative
     OptinNegative    ${CheckOptinNegative}
     Click Element    name=Answer_7_0_0_0    #ยินยอม
+    Sleep    2s
     #NPS
     QNPS_Sale    ${CheckquestionNPS}    ${CheckAdaptiveText_Sale}    ${CheckquestionNPS1}
     Score0to10_text

@@ -21,12 +21,10 @@ Login CallCenter
     Sleep    2s
     Click Element    ${ButtonNext_RD}
     Sleep    3s
-    Capture Page Screenshot    D:/UVS_FullLoop/Survey/Login_CallCenter/5_ShowSurveyCallCenter.png
-    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase61 Survey Sale Positive NoInput OA CSAT ได้รับคำแนะนำการขับขี่_UVS00029
-    #Open Browser
-    Open Browser    ${LinksurveySale_61}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC61/Positive_Page0_TH.png
@@ -135,11 +133,13 @@ TestCase61 Survey Sale Positive NoInput OA CSAT ได้รับคำแน�
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC61/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase62 Survey Sale Positive_ได้รับคำแนะนำการขับขี่_UVS00035
     #Open Browser
-    Open Browser    ${LinksurveySale_62}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC62/Positive_Page0_TH.png
@@ -242,11 +242,13 @@ TestCase62 Survey Sale Positive_ได้รับคำแนะนำการ
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC62/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase63 (N) Survey Sale Negative_Input OA_Optin Yes_Guided_UVS00033
     #Open Browser
-    Open Browser    ${LinksurveySale_63}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC63/Negative_Page0_TH.png
@@ -274,7 +276,7 @@ TestCase63 (N) Survey Sale Negative_Input OA_Optin Yes_Guided_UVS00033
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC63/Negative_PageCSAT_TH.png
-    Click Element    ${Score3}    #Click Score 3 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='3']    #Click Score 3 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Press Key    name = csat_neg    พนักงานพูดไม่ค่อยเข้าใจ อธิบายยาวจนไม่อยากฟัง
@@ -357,11 +359,13 @@ TestCase63 (N) Survey Sale Negative_Input OA_Optin Yes_Guided_UVS00033
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC63/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase64 (N) Survey Sale Negative_Input OA_Optin Yes_NoGuided_UVS00046
     #Open Browser
-    Open Browser    ${LinksurveySale_64}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC64/Negative_Page0_TH.png
@@ -384,7 +388,7 @@ TestCase64 (N) Survey Sale Negative_Input OA_Optin Yes_NoGuided_UVS00046
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC64/Negative_PageCSAT_TH.png
-    Click Element    ${Score4}    #Click Score 4 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='4']    #Click Score 4 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Press Key    name = csat_neg    ไม่มีพนักงานคนไหนเดินเข้ามาทักทายพอเรียกก็ไม่สนใจ
@@ -467,11 +471,14 @@ TestCase64 (N) Survey Sale Negative_Input OA_Optin Yes_NoGuided_UVS00046
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC64/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Sleep    2s
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase65 (N) Survey Sale Negative_Input OA_OptinYes_Guided_UVS00045
     #Open Browser
-    Open Browser    ${LinksurveySale_65}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC65/Negative_Page0_TH.png
@@ -499,7 +506,7 @@ TestCase65 (N) Survey Sale Negative_Input OA_OptinYes_Guided_UVS00045
     QCSAT_Sale    ${CheckquestionCSAT}    ${CheckAdaptiveText_Sale}    ${CheckquestionCSAT1}
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC65/Negative_PageCSAT_TH.png
-    Click Element    ${Score2}    #Click Score 2 CSAT
+    Click Element    //*[@compname="LayoutNodeUI_24"]//following::span[text()='3']    #Click Score 2 CSAT
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Press Key    name = csat_neg    เบื่อมาก ร้อน รอนาน เพลีย
@@ -531,7 +538,7 @@ TestCase65 (N) Survey Sale Negative_Input OA_OptinYes_Guided_UVS00045
     #Attribute5
     Attribute5_Sale    ${CheckAttribute_5}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC65/Negative_Attibute5_TH.png
-    Click Element    css=div[name='page12']] label:nth-of-type(6)    #Click Score 5
+    Click Element    css=div[name='page12'] label:nth-of-type(6)    #Click Score 5
     Sleep    2s
     #Attribute6
     Attribute6_Sale    ${CheckAttribute_6}
@@ -584,11 +591,13 @@ TestCase65 (N) Survey Sale Negative_Input OA_OptinYes_Guided_UVS00045
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC65/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase66 (N) Survey Sale Negative_Input OA_OptinYes_Guided_UVS00040
     #Open Browser
-    Open Browser    ${LinksurveySale_66}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC66/Negative_Page0_TH.png
@@ -695,11 +704,14 @@ TestCase66 (N) Survey Sale Negative_Input OA_OptinYes_Guided_UVS00040
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC66/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Sleep    2s
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase67 Survey Sale Negative_NoInput OA_Optin Yes_Guided_UVS00037
     #Open Browser
-    Open Browser    ${LinksurveySale_67}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC67/Negative_Page0_TH.png
@@ -809,11 +821,14 @@ TestCase67 Survey Sale Negative_NoInput OA_Optin Yes_Guided_UVS00037
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC67/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Sleep    2s
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase68 (N) Survey Sale Negative_InputOA_Optin Yes_Guided_UVS00049
     #Open Browser
-    Open Browser    ${LinksurveySale_68}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC68/Negative_Page0_TH.png
@@ -919,11 +934,13 @@ TestCase68 (N) Survey Sale Negative_InputOA_Optin Yes_Guided_UVS00049
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC68/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase69 Survey Sale Negative_NoInput OA_OptinNo_Guided_UVS00043
     #Open Browser
-    Open Browser    ${LinksurveySale_69}    ${Browser}
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC69/Negative_Page0_TH.png
@@ -1034,7 +1051,10 @@ TestCase69 Survey Sale Negative_NoInput OA_OptinNo_Guided_UVS00043
     Page Should Contain    ${CheckThankyou_Page}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC69/EndingPage_TH.png
     Sleep    2s
-    Close Browser
+    Click Element    ${Btn_IconEND}
+    Sleep    2s
+    Click Element    ${ButtonNext_RD}
+    Sleep    3s
 
 TestCase70 Survey Sale Negative_NoInput OA_OptinYes_Guided_UVS00039
     #Open Browser

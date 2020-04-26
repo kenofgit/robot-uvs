@@ -1215,6 +1215,7 @@ TestCase12 Survey Sale Negative_NoInput OA_OptinNo_NoGuidedUVS00020
     Score0to10_text
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC12/PageCSAT_TH.png
     Click Element    ${Score1}    #Click Score 1 CSAT
+    Sleep    2s
     #Input CSAT OA Neg
     OA_CSATNeg    ${CheckCSAT_Neg}    ${CheckCSAT_Neg1}
     Capture Page Screenshot    D:/UVS_FullLoop/Survey/TestCase_Sale/TC12/PageCSATOAPositive_TH.png
