@@ -2,7 +2,7 @@
 Library           Selenium2Library
 
 *** Variables ***
-${URL_Report}     http://influencer.bizcuitvoc.com/
+${URL_Report}     http://influencer-staging.bizcuitvoc.com/
 #Browser
 ${Browser}        Chrome
 #UserPass

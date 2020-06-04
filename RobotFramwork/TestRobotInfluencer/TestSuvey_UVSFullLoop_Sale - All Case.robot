@@ -6,7 +6,7 @@ Resource          Keywords.robot
 *** Test Cases ***
 Testcase1_AddInfluencerList
     #Open Browser
-    Open Browser    ${URL_Report}    ${Browser}
+    Open Browser    ${URL_Report}    firefox
     Maximize Browser Window
     Sleep    2s
     Capture Page Screenshot    D:/Influencer/Result/Login.png
@@ -33,8 +33,8 @@ Testcase1_AddInfluencerList
     Click Element    //div[@id='add-influencer']//form/div[2]/div[2]/div//div[@class='dayContainer']/span[11]    #วันที่10
     Select From List by Value    //div[@id='add-influencer']//div[3]/select    Female    #Choose Gender
     Select From List by Value    //div[@id='add-influencer']//div[4]/select    Thai    #Choose Nationality
-    Select From List by Value    //div[@id='add-influencer']//div[5]/select    Thai    #Choose Company
-    Select From List by Value    //div[@id='add-influencer']//div[6]/select    Artist    #Choose Influencer Type
-    Select From List by Value    //div[@id='add-influencer']//div[7]/select    mega    #Choose Influencer Tier
-    Select From List by Value    //div[@id='add-influencer']//div[8]/div[2]    food    #Choose Interests
-    Select From List by Value    //div[@id='add-influencer']//div[9]/div[2]/div/select    facebook    #Choose Channels
+    #Select From List by Value    //div[@id='add-influencer']//div[5]/select    Thai    #Choose Company
+    #Select From List by Value    //div[@id='add-influencer']//div[6]/select    Artist    #Choose Influencer Type
+    #Select From List by Value    //div[@id='add-influencer']//div[7]/select    mega    #Choose Influencer Tier
+    #Select From List by Value    //div[@id='add-influencer']//div[8]/div[2]    food    #Choose Interests
+    #Select From List by Value    //div[@id='add-influencer']//div[9]/div[2]/div/select    facebook    #Choose Channels
